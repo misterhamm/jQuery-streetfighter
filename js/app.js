@@ -36,11 +36,14 @@ function playHadouken() {
     });
 
     $(document).keydown(function(e) {
-        var keyCode = (e.keyCode ? e.keyCode : e.which);
-        if(keyCode == '88'){
-            $('ryu-ready').hide();
-            $('ryu-still').hide();
+        if(e.which == 88){
+            $('.ryu-ready').hide();
+            $('.ryu-still').hide();
             $('.ryu-pose').show();
         }
+    });
+    $(document).keyup(function(e) {
+            $('.ryu-still').show();
+            $('.ryu-pose').hide();
     });
 });
