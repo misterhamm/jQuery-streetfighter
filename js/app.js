@@ -35,10 +35,11 @@ function playHadouken() {
         $('.ryu-ready').show();
     });
 
-    $('.ryu').keydown(function(e) {
-        var keyCode = (e.keyCode ? e.keyCode : event.which);
-        if(keyCode==88){
-            $('.ryu-ready').hide();
+    $(document).keydown(function(e) {
+        var keyCode = (e.keyCode ? e.keyCode : e.which);
+        if(keyCode == '88'){
+            $('ryu-ready').hide();
+            $('ryu-still').hide();
             $('.ryu-pose').show();
         }
     });
